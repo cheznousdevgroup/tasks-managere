@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [TasksController::class, 'index'])->name('index');
-Route::get('/create', [TasksController::class, 'create'])->name('create');
+
+// Route::get('/tache/create', [TasksController::class, 'create'])->name('create');
+// Route::post('/tache/cree', [TasksController::class, 'store'])->name('store');
+// Route::get('/tache/edit/{id}', [TasksController::class, 'edit'])->name('edit');
+// Route::put('/tache/update/{id}', [TasksController::class, 'update'])->name('update');
+// Route::delete('/tache/delete/{id}', [TasksController::class, 'destroy'])->name('destroy');
+Route::resource('/tache',TasksController::class);
